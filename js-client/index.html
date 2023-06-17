@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Handwritten text recognition</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="mainHeader">Handwritten text recognition</h1>
+
+    <div id="mainBox">
+      <div id="innerBox1">
+        <div id="uploadedImage"></div>
+        <form id="uploadForm">
+          <input type="file" id="inputFile" />
+          <input type="submit" />
+        </form>
+      </div>
+
+      <div id="innerBox2">
+        <textarea id="texBox1" name="texbox1" rows="4" cols="50">
+        Enter text here...
+        </textarea>
+
+        <button type="button" id="transferButton">
+          Transfer text to handwritten
+        </button>
+      </div>
+
+      <div id="innerBox3">
+        <div id="generatedImage"></div>
+        <button type="button" id="saveButton">Save into image</button>
+      </div>
+    </div>
+
+    <script src="FileSaver.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

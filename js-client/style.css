@@ -1,0 +1,60 @@
+#mainHeader {
+  color: darkgreen;
+}
+
+#mainBox {
+  border-style: outset;
+  border-color: darkgreen;
+  border-radius: 10px;
+
+  height: 650px;
+  width: 1400px;
+}
+
+#innerBox1,
+#innerBox2,
+#innerBox3 {
+  float: left;
+
+  border-style: outset;
+  border-color: crimson;
+  border-radius: 10px;
+
+  height: 600px;
+  width: 400px;
+
+  margin: 2%;
+}
+
+#texBox1 {
+  position: absolute;
+  margin: 1%;
+  bottom: 120px;
+
+  height: 500px;
+  width: 350px;
+}
+
+#uploadForm,
+#transferButton,
+#saveButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 50px;
+}
+
+#uploadedImage,
+#generatedImage {
+  height: 500px;
+  width: 350px;
+
+  border: 2px solid black;
+  background-position: center;
+  background-color: aliceblue;
+
+  margin: 5%;
+}
+
+div {
+  background-repeat: no-repeat;
+}
