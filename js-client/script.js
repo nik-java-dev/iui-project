@@ -33,14 +33,6 @@ uploadForm.addEventListener("change", function (e) {
   reader.addEventListener("load", () => {
     uploadedImage = reader.result;
 
-    // ***************************************************************
-    // document.getElementById(
-    //   "uploadedImage"
-    // ).style.backgroundImage = `url(${uploadedImage})`;
-
-    // console.log(`url(${uploadedImage})`);
-
-    // ***************************************************************
     var canvas = document.createElement("canvas");
     var context = canvas.getContext("2d");
 
@@ -63,6 +55,7 @@ uploadForm.addEventListener("change", function (e) {
   reader.readAsDataURL(inputFile.files[0]);
 });
 
+var generatedPhoto;
 const transferButton = document.getElementById("transferButton");
 
 transferButton.addEventListener("click", function () {
@@ -78,14 +71,13 @@ transferButton.addEventListener("click", function () {
     body: JSON.stringify({ message: textBox1.value }),
   });
 
-  // req.then((res) => res.json()).then((data) => console.log(data.text));
   req
     .then((responce) => responce.blob())
     .then((blob) => {
       console.log(blob);
       const imageUrl = URL.createObjectURL(blob);
       console.log(imageUrl);
-      // ***************************************************************
+
       var canvas = document.createElement("canvas");
       var context = canvas.getContext("2d");
 
@@ -102,11 +94,8 @@ transferButton.addEventListener("click", function () {
         ).style.backgroundImage = `url(${canvas.toDataURL("image/jpeg")})`;
       };
 
+      generatedPhoto = imageUrl;
       image.src = imageUrl;
-      // ***************************************************************
-      // document.getElementById(
-      //   "generatedImage"
-      // ).style.backgroundImage = `url(${imageUrl})`;
     });
 });
 
@@ -127,6 +116,6 @@ saveButton.addEventListener("click", () => {
       console.log(blob);
       const file = new File([blob], "image", { type: blob.type });
       console.log(file);
-      saveAs(file, "generated_photo");
+      saveAs(generatedPhoto, "generated_photo");
     });
 });

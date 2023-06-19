@@ -4,6 +4,7 @@ import flask
 from flask import Flask, jsonify, send_file
 from flask import json
 from flask_cors import CORS, cross_origin
+from handwritten_converter import get_handwritten_text
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -29,7 +30,6 @@ def upload_image():
             status=200,
             mimetype='application/json'
         )
-        # response.headers.add('Access-Control-Allow-Origin', '*')
 
         return response
     except Exception as err:
@@ -43,18 +43,10 @@ def upload_image():
 def generate_image():
     try:
         text_message = flask.request.get_json()
-        print(text_message['message'])
+        text_to_image = text_message['message']
+        get_handwritten_text(text_to_image)
 
-        # d = {"text": "Photo from python server"}
-
-        # response = app.response_class(
-        #     response=json.dumps(d),
-        #     status=200,
-        #     mimetype='application/json'
-        # )
-        # response.headers.add('Content-Type', 'application/json')
-
-        return send_file('output.png', mimetype='image/gif')
+        return send_file('generated.png', mimetype='image/gif')
 
     except Exception as err:
         print("An exception occurred")
