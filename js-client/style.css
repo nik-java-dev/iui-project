@@ -3,6 +3,7 @@
 }
 
 #mainBox {
+  position: absolute;
   border-style: outset;
   border-color: darkgreen;
   border-radius: 10px;
@@ -29,7 +30,7 @@
 #texBox1 {
   position: absolute;
   margin: 1%;
-  bottom: 120px;
+  bottom: 90px;
 
   height: 500px;
   width: 350px;
@@ -40,11 +41,12 @@
 #saveButton {
   position: absolute;
   margin: 3%;
-  bottom: 50px;
+  bottom: 10px;
 }
 
 #uploadedImage,
 #generatedImage {
+  position: absolute;
   height: 500px;
   width: 350px;
 
@@ -52,7 +54,8 @@
   background-position: center;
   background-color: aliceblue;
 
-  margin: 5%;
+  margin: 2%;
+  top: 10px;
 }
 
 div {

@@ -1,10 +1,11 @@
 from PIL import Image
 
 import flask
-from flask import Flask, jsonify, send_file
+from flask import Flask, send_file
 from flask import json
 from flask_cors import CORS, cross_origin
 from handwritten_converter import get_handwritten_text
+from prediction import predict_text_from_image
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -20,13 +21,13 @@ def upload_image():
     try:
         image_file = flask.request.files.get('inputFile', '')
         img = Image.open(image_file)
-        img = img.convert('L')  # convert to greyscale
-        img.save('output.png')
 
-        d = {"text": "Recognized text from python server"}
+        img.save('input_image.png')
+        recognized_text = predict_text_from_image(img)
+        result = {"text": recognized_text}
 
         response = app.response_class(
-            response=json.dumps(d),
+            response=json.dumps(result),
             status=200,
             mimetype='application/json'
         )
@@ -52,6 +53,7 @@ def generate_image():
         print("An exception occurred")
 
     return {"errorMessage": "Something went wrong"}
+
 
 if __name__ == '__main__':
     app.run()
