@@ -24,7 +24,7 @@ class ImageToWordModel(OnnxInferenceModel):
 
 
 def predict_text_from_image(image):
-    words_images_list = extract_words_from_image(image)
+    words_images_list, h, w, coordinates = extract_words_from_image(image)
 
     configs = BaseModelConfigs.load("model/configs.yaml")
     model = ImageToWordModel(model_path=configs.model_path, char_list=configs.vocab)
@@ -33,4 +33,4 @@ def predict_text_from_image(image):
     for word_image in words_images_list:
         recognized_text_as_words.append(model.predict(word_image))
 
-    return ' '.join(recognized_text_as_words)
+    return ' '.join(recognized_text_as_words), recognized_text_as_words, h, w, coordinates

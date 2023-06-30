@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>Handwritten text editor</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="headerfooter.css" />
   </head>
   <body>
+    <header class="header">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="frontend.html">Start</a></li>
+      </ul>
+    </header>
     <h1 id="mainHeader">Handwritten text editor</h1>
 
     <div id="mainBox">
@@ -23,15 +32,27 @@ Enter text here...</textarea
         <button type="button" id="transferButton">
           Transfer text to handwritten
         </button>
+        <button type="button" id="spellcheckButton">Check spelling</button>
       </div>
 
       <div id="innerBox3">
         <div id="generatedImage"></div>
         <button type="button" id="saveButton">Save as image</button>
+        <select id="chooseBackground">
+          <option value="1">White</option>
+          <option value="2">Old paper</option>
+          <option value="3">Squared paper</option>
+          <option value="4">Lined paper</option>
+        </select>
+      </div>
+      <div id="innerBox4">
+        <button type="button" id="applyButton">Apply</button>
+        <button type="button" id="previewButton">Recognition</button>
+        <div class="container" id="spellchekBox"></div>
       </div>
     </div>
 
-    <script src="FileSaver.min.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="FileSaver.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -21,7 +21,10 @@
   border-color: crimson;
   border-radius: 10px;
 
-  height: 600px;
+  /* height: 600px;
+  width: 400px; */
+
+  height: 400px;
   width: 400px;
 
   margin: 2%;
@@ -30,9 +33,12 @@
 #texBox1 {
   position: absolute;
   margin: 1%;
-  bottom: 90px;
+  bottom: 240px;
 
-  height: 500px;
+  /* height: 500px;
+  width: 350px; */
+
+  height: 350px;
   width: 350px;
 }
 
@@ -41,13 +47,66 @@
 #saveButton {
   position: absolute;
   margin: 3%;
+  /* bottom: 10px; */
+  bottom: 185px;
+}
+
+#innerBox4 {
+  /* float: left; */
+  position: absolute;
+  border-style: outset;
+  border-color: crimson;
+  border-radius: 10px;
+
+  height: 200px;
+  width: 600px;
   bottom: 10px;
+  left: 387px;
+}
+
+#spellcheckButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 185px;
+  left: 690px;
+}
+
+#spellchekBox {
+  position: absolute;
+  border-style: outset;
+  border-color: crimson;
+  border-radius: 10px;
+
+  height: 180px;
+  width: 480px;
+  bottom: 10px;
+  left: 15px;
+}
+
+#applyButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 130px;
+  left: 490px;
+
+  width: 80px;
+}
+
+#previewButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 90px;
+  left: 490px;
+
+  width: 80px;
 }
 
 #uploadedImage,
 #generatedImage {
   position: absolute;
-  height: 500px;
+  /* height: 500px;
+  width: 350px; */
+  height: 350px;
   width: 350px;
 
   border: 2px solid black;
@@ -60,4 +119,42 @@
 
 div {
   background-repeat: no-repeat;
+}
+
+/* ************************ SPELLCHECKER */
+
+.draggable {
+  float: left;
+  padding: 0.2rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+  width: max-content;
+  font-size: x-small;
+
+  border-radius: 10%;
+  text-align: center;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+  background-color: blueviolet;
+}
+
+.draggable:hover::after {
+  content: " →?→ " " " attr(data-tooltip);
+  text-align: center;
+  color: red;
+  font-size: x-small;
+}
+
+/* ************************ SPELLCHECKER */
+
+#chooseBackground {
+  position: absolute;
+  margin: 3%;
+  bottom: 185px;
+  left: 1175px;
+
+  width: 100px;
 }
