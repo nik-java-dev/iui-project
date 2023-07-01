@@ -8,47 +8,6 @@ body {
   background-color: blue;
 }
 
-/* .photoPlaceholder img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-
-  width: 1000px;
-  height: 1095px;
-} */
-
-#id1 {
-  position: absolute;
-
-  top: 139px;
-  left: 45px;
-
-  width: 64px;
-  /* 109 - 45 */
-  height: 38px;
-  /* 177 - 139 */
-}
-
-#id2 {
-  position: absolute;
-
-  top: 141px;
-  left: 152px;
-
-  width: 83px;
-  height: 30px;
-}
-
-#id3 {
-  position: absolute;
-
-  top: 343px;
-  left: 521px;
-
-  width: 49px;
-  height: 50px;
-}
-
 .marker {
   border-radius: 5px;
   background: rgba(251, 251, 0, 0.473);

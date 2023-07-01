@@ -1,11 +1,29 @@
+body {
+  background-color: rgb(190, 190, 247);
+}
+
+.panel {
+  background-color: royalblue;
+}
+
+.mainPanel {
+  background-color: aliceblue;
+}
+
 #mainHeader {
-  color: darkgreen;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: aliceblue;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
 }
 
 #mainBox {
   position: absolute;
   border-style: outset;
-  border-color: darkgreen;
+  border-color: blue;
   border-radius: 10px;
 
   height: 650px;
@@ -18,7 +36,8 @@
   float: left;
 
   border-style: outset;
-  border-color: crimson;
+  border-color: blue;
+  border-width: 3px;
   border-radius: 10px;
 
   /* height: 600px;
@@ -55,7 +74,8 @@
   /* float: left; */
   position: absolute;
   border-style: outset;
-  border-color: crimson;
+  border-color: blue;
+  border-width: 1px;
   border-radius: 10px;
 
   height: 200px;
@@ -74,8 +94,10 @@
 #spellchekBox {
   position: absolute;
   border-style: outset;
-  border-color: crimson;
+  border-color: blue;
+  border-width: 2px;
   border-radius: 10px;
+  background-color: rgb(242, 236, 251);
 
   height: 180px;
   width: 480px;
@@ -104,14 +126,16 @@
 #uploadedImage,
 #generatedImage {
   position: absolute;
-  /* height: 500px;
-  width: 350px; */
+
   height: 350px;
   width: 350px;
 
   border: 2px solid black;
   background-position: center;
-  background-color: aliceblue;
+  background-color: rgb(242, 236, 251);
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: blue;
 
   margin: 2%;
   top: 10px;
@@ -126,8 +150,9 @@ div {
 .draggable {
   float: left;
   padding: 0.2rem;
-  background-color: white;
-  border: 1px solid black;
+  color: #fff;
+  background-color: #04aa6d;
+  border: 1px solid rgb(255, 239, 8);
   cursor: move;
   width: max-content;
   font-size: x-small;
@@ -138,7 +163,7 @@ div {
 
 .draggable.dragging {
   opacity: 0.5;
-  background-color: blueviolet;
+  background-color: #ff6200;
 }
 
 .draggable:hover::after {
@@ -158,3 +183,53 @@ div {
 
   width: 100px;
 }
+
+/* ************************ BUTTON ANIMATION */
+.button {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px rgb(108, 55, 241);
+}
+
+.button:hover {
+  background-color: #ff6200;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[type="file"]::file-selector-button {
+  border: none;
+  background: #04aa6d;
+  box-shadow: 0 3px rgb(108, 55, 241);
+  padding: 4px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #ff6200;
+}
+
+.select-box {
+  color: #fff;
+  background: #04aa6d;
+  box-shadow: 0 3px rgb(108, 55, 241);
+  border-radius: 10px;
+}
+
+.select-box:hover {
+  background-color: #ff6200;
+}
+
+/* ************************ BUTTON ANIMATION */

@@ -1,0 +1,73 @@
+.container {
+  background: linear-gradient(
+    to bottom,
+    rgb(190, 190, 247),
+    #89bcea,
+    #d1d9df,
+    rgb(190, 190, 247)
+  );
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.left-middle {
+  padding-left: 10%;
+  padding-right: 20%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: justify;
+  line-height: 200%;
+  font-family: "Montserrat";
+  color: cornflowerblue;
+}
+.right-middle {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-middle img {
+  padding-left: 30%;
+  padding-right: 20%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  max-width: 80%;
+}
+
+.motto {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: showMotto 1s ease-in-out forwards;
+}
+.border-transition {
+  border: 2px solid transparent;
+  transition: border-color 5s ease-in-out;
+}
+
+.border-transition:hover {
+  border-color: royalblue;
+}
+@keyframes showMotto {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#startButton {
+  height: 50px;
+  width: 100px;
+}
