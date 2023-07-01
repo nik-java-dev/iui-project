@@ -1,11 +1,29 @@
+body {
+  background-color: rgb(190, 190, 247);
+}
+
+.panel {
+  background-color: royalblue;
+}
+
+.mainPanel {
+  background-color: aliceblue;
+}
+
 #mainHeader {
-  color: darkgreen;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: aliceblue;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
 }
 
 #mainBox {
   position: absolute;
   border-style: outset;
-  border-color: darkgreen;
+  border-color: blue;
   border-radius: 10px;
 
   height: 650px;
@@ -18,10 +36,14 @@
   float: left;
 
   border-style: outset;
-  border-color: crimson;
+  border-color: blue;
+  border-width: 3px;
   border-radius: 10px;
 
-  height: 600px;
+  /* height: 600px;
+  width: 400px; */
+
+  height: 400px;
   width: 400px;
 
   margin: 2%;
@@ -30,9 +52,12 @@
 #texBox1 {
   position: absolute;
   margin: 1%;
-  bottom: 90px;
+  bottom: 240px;
 
-  height: 500px;
+  /* height: 500px;
+  width: 350px; */
+
+  height: 350px;
   width: 350px;
 }
 
@@ -41,18 +66,76 @@
 #saveButton {
   position: absolute;
   margin: 3%;
+  /* bottom: 10px; */
+  bottom: 185px;
+}
+
+#innerBox4 {
+  /* float: left; */
+  position: absolute;
+  border-style: outset;
+  border-color: blue;
+  border-width: 1px;
+  border-radius: 10px;
+
+  height: 200px;
+  width: 600px;
   bottom: 10px;
+  left: 387px;
+}
+
+#spellcheckButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 185px;
+  left: 690px;
+}
+
+#spellchekBox {
+  position: absolute;
+  border-style: outset;
+  border-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: rgb(242, 236, 251);
+
+  height: 180px;
+  width: 480px;
+  bottom: 10px;
+  left: 15px;
+}
+
+#applyButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 130px;
+  left: 490px;
+
+  width: 80px;
+}
+
+#previewButton {
+  position: absolute;
+  margin: 3%;
+  bottom: 90px;
+  left: 490px;
+
+  width: 80px;
 }
 
 #uploadedImage,
 #generatedImage {
   position: absolute;
-  height: 500px;
+
+  height: 350px;
   width: 350px;
 
   border: 2px solid black;
   background-position: center;
-  background-color: aliceblue;
+  background-color: rgb(242, 236, 251);
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: blue;
 
   margin: 2%;
   top: 10px;
@@ -61,3 +144,92 @@
 div {
   background-repeat: no-repeat;
 }
+
+/* ************************ SPELLCHECKER */
+
+.draggable {
+  float: left;
+  padding: 0.2rem;
+  color: #fff;
+  background-color: #04aa6d;
+  border: 1px solid rgb(255, 239, 8);
+  cursor: move;
+  width: max-content;
+  font-size: x-small;
+
+  border-radius: 10%;
+  text-align: center;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+  background-color: #ff6200;
+}
+
+.draggable:hover::after {
+  content: " →?→ " " " attr(data-tooltip);
+  text-align: center;
+  color: red;
+  font-size: x-small;
+}
+
+/* ************************ SPELLCHECKER */
+
+#chooseBackground {
+  position: absolute;
+  margin: 3%;
+  bottom: 185px;
+  left: 1175px;
+
+  width: 100px;
+}
+
+/* ************************ BUTTON ANIMATION */
+.button {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px rgb(108, 55, 241);
+}
+
+.button:hover {
+  background-color: #ff6200;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[type="file"]::file-selector-button {
+  border: none;
+  background: #04aa6d;
+  box-shadow: 0 3px rgb(108, 55, 241);
+  padding: 4px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #ff6200;
+}
+
+.select-box {
+  color: #fff;
+  background: #04aa6d;
+  box-shadow: 0 3px rgb(108, 55, 241);
+  border-radius: 10px;
+}
+
+.select-box:hover {
+  background-color: #ff6200;
+}
+
+/* ************************ BUTTON ANIMATION */

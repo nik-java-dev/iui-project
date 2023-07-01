@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(190, 190, 247);
+}
+
+.photoPlaceholder {
+  width: max-content;
+  height: max-content;
+  background-color: blue;
+}
+
+.marker {
+  border-radius: 5px;
+  background: rgba(251, 251, 0, 0.473);
+  transition: 0.3s;
+}
+
+.marker:hover {
+  background-color: rgba(35, 143, 3, 0.5);
+}
+
+#seggestionBox {
+  position: absolute;
+  left: calc(100% - 400px);
+  top: calc(100% - 500px);
+  border-radius: 20px;
+
+  width: 400px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+#suggestionHeader {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  color: aliceblue;
+}
+
+#suggestedText {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: aliceblue;
+  font-size: x-large;
+}
+
+#closeButton {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}

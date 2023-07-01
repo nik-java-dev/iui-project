@@ -72,4 +72,4 @@ def extract_words_from_image(image_as_pil):
             cv2.rectangle(img3, (x + x2, y + y2), (x + x2 + w2, y + y2 + h2), (255, 255, 100), 2)
     cv2.imwrite('segmented_image.png', img3)
 
-    return turn_word_image_in_black_and_white(words_list, img)
+    return turn_word_image_in_black_and_white(words_list, img), img.shape[0], img.shape[1], words_list
